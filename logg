@@ -1,0 +1,20 @@
+import datetime
+import logging
+def get_logger(name):
+    log_file_name=path
+    log_format = ('[%(asctime)s - %(levelname)s] - [%(funcName)s] - %(message)s')
+    logging.basicConfig(level=logging.DEBUG,
+                        format=log_format,
+                        filename=log_file_name,
+                        filemode='a')
+    console = logging.StreamHandler()
+    console.setLevel(logging.DEBUG)
+    console.setFormatter(logging.Formatter(log_format))
+    logging.getLogger(name).addHandler(console)
+    return logging.getLogger(name)
+
+
+
+
+logging = loggerobject.get_logger(__name__)
+
